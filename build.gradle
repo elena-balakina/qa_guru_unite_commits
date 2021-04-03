@@ -17,6 +17,10 @@ allure {
     }
 }
 
+test {
+    useJUnitPlatform()
+}
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -32,8 +36,4 @@ dependencies {
             "net.lingala.zip4j:zip4j:1.3.2")
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     testRuntime 'com.browserup:browserup-proxy-core:2.0.1'
-}
-
-test {
-    useJUnitPlatform()
 }
